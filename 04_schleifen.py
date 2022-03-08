@@ -49,8 +49,7 @@ for i in range(m):
 
 for w in wort:
     print(w)
-
-
+"""
 
 # Schreibe ein Programm, das einen beliebigen String einliest.
 # In diesem String sollen alle 'a' durch ein '*' ersetzt werden.
@@ -59,19 +58,30 @@ for w in wort:
 # Ausgabe: B*n*ne
 
 neues_wort = input("Bitte gib ein Wort ein: ")
-#x = ''
+
+"""
+x = ''
 for w in neues_wort:
     if w == 'a':
-        print('*', end = "")
-        #x = x + '*' # x += '*'
+        x += '*' # x = x + '*' 
     else:
-        print(w, end = "")
-        #x = x + w # x += w
-#print(x)    
+        x = x + w # x += w
+print(x)    
+"""
+i = 0
+
+while i < len(neues_wort):
+    if neues_wort[i] == 'a':
+        print('*')
+    else:
+        print(neues_wort[i])
+    i += 1
+
+
+
 #print(neues_wort.replace('a', '*'))
 
-
-
+""""
 wort = input('Soll ich die Maschine Starten?')
 
 boolean = False
@@ -105,7 +115,7 @@ for z in range(zahl + 1):
     if z % 2 == 1:
         print(z)
 
-"""
+
 
 # Schreibe ein Programm, das ein Rechteck aus Sternen ausgibt.
 # Dazu müssen die Höhe und die Breite des Rechtecks als natürliche Zahlen eingelesen werden.
@@ -121,9 +131,22 @@ for z in range(zahl + 1):
 breite = int(input('Bitte gib eine Breite ein: '))
 hoehe = int(input('Bitte gib eine Höhe ein: '))
 
-for s in range(hoehe):
-    print(breite * '*')
+#for s in range(hoehe):
+#    print(breite * '*')
 
+s = 1
+while s <= hoehe:
+    print(breite * '*')
+    s = s + 1
+
+
+i = 1
+
+while i <= 10:
+    print(i)
+    i += 1
+
+    """
 
 
 
