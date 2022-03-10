@@ -57,7 +57,7 @@ for w in wort:
 # Wort: Banane
 # Ausgabe: B*n*ne
 
-neues_wort = input("Bitte gib ein Wort ein: ")
+# neues_wort = input("Bitte gib ein Wort ein: ")
 
 """
 x = ''
@@ -68,14 +68,19 @@ for w in neues_wort:
         x = x + w # x += w
 print(x)    
 """
-i = 0
 
-while i < len(neues_wort):
-    if neues_wort[i] == 'a':
-        print('*')
-    else:
-        print(neues_wort[i])
-    i += 1
+def buchstabenErsetzen(wort, buchstabe, zeichen):
+    neues_wort = ''
+    i = 0
+    while i < len(wort):
+        if wort[i] == buchstabe:
+            neues_wort += zeichen
+        else:
+            neues_wort += wort[i]
+        i += 1
+    return neues_wort
+
+print(buchstabenErsetzen('Python', 'h', '4'))
 
 
 
