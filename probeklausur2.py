@@ -85,4 +85,4 @@ def buchstabenErsetzen(wort, buchstabe, zeichen): # Funktion, mit drei Übergabe
         i += 1 # Laufvariable/Index, iterieren, addition von 1
     return neues_wort # return/Rückgabewert der Variable neues_wort
 
-print(buchstabenErsetzen('Python', 'h', '4'))
+print(buchstabenErsetzen('Python', 'h', '4')) # Pyt4on

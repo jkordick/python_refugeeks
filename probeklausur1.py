@@ -1,3 +1,4 @@
+""""
 # Aufgabe 1
 
 # Programmiersprache: Sprache, in der wir ein Programm schreiben, 
@@ -30,6 +31,8 @@ if tipp == 3:
 else: 
     print('Verloren')
 print('Das Spiel ist aus')
+
+
 
 # Aufgabe 4
 
@@ -69,8 +72,8 @@ def berechneRechteck(laenge, breite):
 
 berechneRechteck(5, 7)
 
-
 """""
+
 
 # Aufgabe 6
 def buchstabenErsetzen(wort, buchstabe, zeichen): # Definition, Funktion, Übergabeparameter
@@ -81,9 +84,7 @@ def buchstabenErsetzen(wort, buchstabe, zeichen): # Definition, Funktion, Überg
             neues_wort += zeichen # wenn if wahr oder true ist, dann speichern wir in der Variable neues_wort den Übergabeparameter zeichen
         else:   # wenn if falsch oder false ist, dann betrachten wir else oder führen den else-Zweig aus
             neues_wort += w # wenn if falsch oder false ist, dann speichern in der Variable neues_wort die Laufvariable w
-    
     return neues_wort # wenn die Schleife zu ende ist oder durchgelaufen ist, dann geben wir die Variable neues_wort zurück
 
 print(buchstabenErsetzen("intoCode", "o", "#"))
 
-"""
