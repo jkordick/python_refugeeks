@@ -8,11 +8,22 @@ class Person:
     # nehmeZu(10): return gewicht + 10; nehmeAb(10): return gewicht - 10
 
     # Für die Schnellen: 
-    # Schreibe eine Methode getBMI(), die den BMI einer Person zurück gibt
+    # Schreibe eine Methode getBMI(), die den BMI der Person zurück gibt
+
+
+    # Hausaufgabe (freiwillig)
 
     # Füge ein weiteres Attribut wohnort hinzu, schreibe eine get-Methode und eine
     # set-Methode für Wohnort
 
+    # Schreibe die Klasse Person fertig.
+    # Erstelle eine neue Datei und erzeuge in ihr
+    # neue Objekte vom Typ Person und teste die 
+    # implementierten Funktionen.
+    # Tipp: Dazu musst du die Klasse Person in der neuen Datei
+    # importieren.  
+
+ 
 
 
 
@@ -42,11 +53,4 @@ class Person:
 
 
 
-# Hausaufgabe (freiwillig)
 
-# Schreibe die Klasse Person fertig.
-# Erstelle eine neue Datei und erzeuge in ihr
-# neue Objekte vom Typ Person und teste die 
-# implementierten Funktionen.
-# Dazu musst du die Klasse Person in der neuen Datei
-# importieren.
