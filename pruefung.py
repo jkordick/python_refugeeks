@@ -10,7 +10,7 @@ class Pruefung:
         self.person = person
         self.note = note
         self.bestanden = self.hatBestanden()
-
+        
     def __str__(self):
         return str(self.fach) + ', ' + str(self.person) + ', ' + str(self.note) + ', ' + str(self.bestanden)
 
@@ -46,6 +46,7 @@ class Pruefung:
             return True
         elif self.note >= 5:
             return False
+        return None
 
 
 pruefung = Pruefung('Theoretische Informatik', 'Julia', 4.0)
