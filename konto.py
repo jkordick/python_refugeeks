@@ -67,5 +67,9 @@ class Girokonto(Konto):
         else: 
             print("Die Auszahlung kann nicht durchgeführt werden.")
 
+# super().Methode(): über die Methode super() rufen wir die Methode der Superklasse auf 
+# Superklasse.Methode(self): über den Namen der Superklasse rufen wir die Methode der Superklasse auf und müssen
+# dann den Übergabeparameter self verwenden
+
 
     
