@@ -49,6 +49,7 @@ class Festgeldkonto(Konto):
      def __str__(self):
         return Konto.__str__(self) + ', ' + str(self.zinssatz)
 
+    # Aufgabe der Bank?
      def berechneZins(self):
          self.kontostand = ((self.kontostand/100) * self.zinssatz) + self.kontostand
 
@@ -70,6 +71,14 @@ class Girokonto(Konto):
 # super().Methode(): über die Methode super() rufen wir die Methode der Superklasse auf 
 # Superklasse.Methode(self): über den Namen der Superklasse rufen wir die Methode der Superklasse auf und müssen
 # dann den Übergabeparameter self verwenden
+
+# Teil 2 Hausaufgabe (freiwillig)
+# 1. Finde heraus, wie man in Python Attribute und Methoden als privat markieren kann. 
+# Dabei gibt es bei Python einige Besonderheiten.
+# Setze die Kontonummer in der Klasse Konto auf privat.
+
+# 2. Erweitere unser heutiges Programm um eine Klasse Bank. Überlege dir, wie eine Bank verschiedene
+# Konten verwalten könnte und welche Attribute und Methoden Teil der Klasse Bank sein sollten.
 
 
     
