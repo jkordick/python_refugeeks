@@ -1,12 +1,16 @@
 # Hausaufgabe (freiwillig)
 # 1. Welche anderen Beziehungen zwischen Klassen, außer Vererbung gibt es?
+
 # Finde heraus, wie man die Klasse Person, die wir bereits geschrieben haben 
 # als Typ der Variable Besitzer unserer Klasse Haustier verwenden kann.
 # Beispiel: besitzer = Person('Julia', 31)
+
 # 2. Finde heraus, wie so genannte Mehrfachvererbung funktioniert und mache unsere Klasse
 # Schlange zu einer Kind-Klasse von Haustier UND Wildtier.
 # Beispiel: schlange = Schlange(fell, gewicht, groesse, besitzer, kontinent)
 # print(schlange) # False, 2, 2.00, 'Julia', 'Australien'
+
+from datei import Person
 
 class Tier: # Superklasse / Elternklasse
     def __init__(self, fell, gewicht, groesse): # fell boolean(True or False)
@@ -24,9 +28,9 @@ class Tier: # Superklasse / Elternklasse
         return None
 
 class Haustier(Tier):
-    def __init__(self, fell, gewicht, groesse, besitzer):
+    def __init__(self, fell, gewicht, groesse, name_person, gewicht_person, groesse_person, alter_person, wohnort_person):
         super().__init__(fell, gewicht, groesse)
-        self.besitzer = besitzer # soll vom Typ Person sein
+        self.besitzer = Person(name_person, gewicht_person, groesse_person, alter_person, wohnort_person)
     
     def __str__(self):
         return super().__str__() + ' ' + str(self.besitzer)
@@ -65,9 +69,11 @@ class Katze(Haustier):
     def __str__(self):
         return 'Katze: ' + super().__str__() + ', Schnurrhaare: ' + str(self.schnurrhaare)
     
-class Schlange(Haustier):
-    def __init__(self, fell, gewicht, groesse, keineBeine, besitzer):
-        super().__init__(fell, gewicht, groesse, besitzer)
+class Schlange(Haustier, Wildtier):
+    def __init__(self, fell, gewicht, groesse, keineBeine, besitzer, kontinent):
+        Haustier.__init__(self, fell, gewicht, groesse, besitzer) # super-Konstruktor von Haustier
+        Wildtier.__init__(self, fell, gewicht, groesse, kontinent) # super-Kontstruktor von Wildtier
+        # super().__init__() == Superklasse.__init__(self)
         self.keineBeine = keineBeine
     
     def __str__(self):
