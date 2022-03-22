@@ -20,9 +20,17 @@
 # geworfen wird und ausgibt: "Weil der Kontostand zu gering ist, kann keine Auszahlung gemacht werden."
 # Fange deine Exception in einem try/except
 
+# Schreibe eine eigene Exception, die in dem Fall, dass der Dispokredit überzogen wird geworfen wird und ausgibt:
+# "Sie haben ihren Dispokredit ausgeschöpft."
+# Fange deine Exception in einem try/except
+
 class GuthabenException(Exception):
     def __str__(self):
         return "Weil der Kontostand zu gering ist, kann keine Auszahlung gemacht werden."
+
+class DispoException(Exception):
+    def __str__(self):
+        return "Sie haben ihren Dispokredit ausgeschöpft."
 
 class Konto: 
     def __init__(self, kontoinhaber, kontonummer, kontostand):
@@ -80,7 +88,7 @@ class Girokonto(Konto):
         if betrag <= self.kontostand + self.dispokredit:
             self.kontostand -= betrag
         else: 
-            raise GuthabenException()
+            raise DispoException()
 
 # super().Methode(): über die Methode super() rufen wir die Methode der Superklasse auf 
 # Superklasse.Methode(self): über den Namen der Superklasse rufen wir die Methode der Superklasse auf und müssen
@@ -103,9 +111,9 @@ except:
     print(GuthabenException())
 
 try: # ausprobieren, ob das Programm läuft # brauchen wir IMMER
-    girokonto.abheben(1000.00)
+    girokonto.abheben(3000.00)
 except: # wenn ein Fehler auftritt # oder finally # wenn finally vorhanden, dann auch optional
-    print(GuthabenException())
+    print(DispoException())
 else: # wenn kein Fehler auftritt # optional
     print('Alles in Ordnung')
 finally: # wird immer ausgeführt # oder except # wenn except vorhanden, dann auch optional
