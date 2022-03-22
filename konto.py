@@ -1,6 +1,7 @@
+# This Python file uses the following encoding: utf-8
 # Teil 1
 # Schreibe eine Klasse Konto mit einen Kontoinhaber, einer Kontonummer und einem Kontostand
-# Der Name des Kontoinhabers soll geändert werden können, die Kontonummer aber nicht.
+# Der Name des Kontoinhabers soll geaendert werden können, die Kontonummer aber nicht.
 #
 # Schreibe eine Sub bzw. Kinderklasse Festgeldkonto, das kann mit einem gegebenen Zinssatz 
 # verzinst werden, der Zinssatz soll für alle Festgeldkonten gleich sein.
@@ -15,14 +16,20 @@
 # kleiner als der Kontostand sind. Für ein Girokonto kann das Konto bis zu dem Betrag überzogen
 # werden, der durch Dispokredit festgelegt ist.
 
+# Schreibe eine eigene Exception, die in dem Fall, dass auf dem Konto nicht genug Guthaben vorhanden ist
+# geworfen wird und ausgibt: "Weil der Kontostand zu gering ist, kann keine Auszahlung gemacht werden."
+# Fange deine Exception in einem try/except
+
 class Konto: 
     def __init__(self, kontoinhaber, kontonummer, kontostand):
         self.kontoinhaber = kontoinhaber
-        self.kontonummer = kontonummer
+        self.__kontonummer = kontonummer
         self.kontostand = kontostand
     
+
     def __str__(self):
-        return str(self.kontostand) + ', ' + str(self.kontonummer) + ', ' + str(self.kontostand)
+        return str(self.kontostand) + ', ' + str(self.__kontonummer) + ', ' + str(self.kontostand)
+    
     
     def setKontoinhaber(self, neuer_kontoinhaber):
         self.kontoinhaber = neuer_kontoinhaber
@@ -30,6 +37,9 @@ class Konto:
     # kontonummer private ODER bieten keinen Setter an ODER wir schreiben einen Dummy-Setter
     def setKontonummer(self, neue_kontonummer):
         return
+    
+    def getKontonummer(self):
+        return self.__kontonummer
     
     def einzahlen(self, betrag):
         self.kontostand += betrag
@@ -79,6 +89,10 @@ class Girokonto(Konto):
 
 # 2. Erweitere unser heutiges Programm um eine Klasse Bank. Überlege dir, wie eine Bank verschiedene
 # Konten verwalten könnte und welche Attribute und Methoden Teil der Klasse Bank sein sollten.
+
+konto = Konto('Sofiane', 12345, 200.00)
+konto.kontonummer = 56789
+print(konto.getKontonummer())
 
 
     
