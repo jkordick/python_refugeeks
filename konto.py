@@ -20,6 +20,10 @@
 # geworfen wird und ausgibt: "Weil der Kontostand zu gering ist, kann keine Auszahlung gemacht werden."
 # Fange deine Exception in einem try/except
 
+class GuthabenException(Exception):
+    def __str__(self):
+        return "Weil der Kontostand zu gering ist, kann keine Auszahlung gemacht werden."
+
 class Konto: 
     def __init__(self, kontoinhaber, kontonummer, kontostand):
         self.kontoinhaber = kontoinhaber
@@ -48,7 +52,7 @@ class Konto:
         if betrag <= self.kontostand:
             self.kontostand -= betrag
         else: 
-            print("Die Auszahlung kann nicht durchgeführt werden.")
+            raise GuthabenException()
 
 # Kinderklassen bzw Subklassen erben von den Elternklassen Attribute UND Methoden/Funktionen
 class Festgeldkonto(Konto):
@@ -76,7 +80,7 @@ class Girokonto(Konto):
         if betrag <= self.kontostand + self.dispokredit:
             self.kontostand -= betrag
         else: 
-            print("Die Auszahlung kann nicht durchgeführt werden.")
+            raise GuthabenException()
 
 # super().Methode(): über die Methode super() rufen wir die Methode der Superklasse auf 
 # Superklasse.Methode(self): über den Namen der Superklasse rufen wir die Methode der Superklasse auf und müssen
@@ -91,8 +95,20 @@ class Girokonto(Konto):
 # Konten verwalten könnte und welche Attribute und Methoden Teil der Klasse Bank sein sollten.
 
 konto = Konto('Sofiane', 12345, 200.00)
-konto.kontonummer = 56789
-print(konto.getKontonummer())
+girokonto = Girokonto('Viktoria', 1121212, 2000.00, 0)
 
+try:
+    konto.abheben(300.00)
+except:
+    print(GuthabenException())
+
+try: # ausprobieren, ob das Programm läuft # brauchen wir IMMER
+    girokonto.abheben(1000.00)
+except: # wenn ein Fehler auftritt # oder finally # wenn finally vorhanden, dann auch optional
+    print(GuthabenException())
+else: # wenn kein Fehler auftritt # optional
+    print('Alles in Ordnung')
+finally: # wird immer ausgeführt # oder except # wenn except vorhanden, dann auch optional
+    print('Finally')
 
     
