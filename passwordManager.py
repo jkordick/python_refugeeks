@@ -56,8 +56,8 @@ class Account:
     def __setPassword__(self, password):
         self.__password = password
     
-    def changePassword(self, password):
-        self.__setPassword__(password)
+    def changePassword(self, neues_password):
+        self.__setPassword__(neues_password)
     
     def setProgram(self, program):
         self.program = program
@@ -69,46 +69,51 @@ class Account:
         self.__username = username
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Schreibe eine Klasse AdminAccount, die von Account erbt.
+# AdminAccount hat ein zusätzliches Attribut
+# istAdminAcccount - boolean
 # Überlege dir, wie man den AdminAccount besonders gegen die 
 # Manipulierung von Daten schützen sollte!
 # Es darf nur ein AdminAccount erstellt werden.
 # Überlege dir, wie man die Erstellung eines weiteren AdminAccounts verhindern
 # könnte - Exception?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Schreibe eine Klasse PasswordManager mit zwei Attributen:
 # adminAccount - vom Typ AdminAccount
