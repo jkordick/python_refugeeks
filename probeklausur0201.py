@@ -41,7 +41,7 @@ class Milkshake:
 # Mit self werden Klassen-Attribute und Methoden gekennzeichnet.
 
 # 4) Schreibe alle Datentypen und Datenstrukturen auf, die wir bisher
-# in Python kennengelernt haben.
+# in Python kennengelernt haben. #8
 # integer, string, float, boolean, none, list, tuple, dictionary
 
 # 5) Schreibe ein Programm. Schreibe nur Konstuktoren und die String-Methoden und 
@@ -117,7 +117,7 @@ class Banane(Obst): #2
 # 10
 
 
-# 42
+# 50
 
 
   
