@@ -64,7 +64,7 @@ class Delphin(Tier): #2
 
 class Clownfisch(Tier): #2
     def __init__(self, saeugetier, name, lebtImMeer): #1
-        super().__init__(saeugetier, name, lebtImMeer) #1
+        super().__init__(saeugetier, name, lebtImMeer) #1 # ruft den Konstruktor der Super-Klasse bzw Eltern-Klasse
     
     def __str__(self): #1
         return super().__str__() #1
