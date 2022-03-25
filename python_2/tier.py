@@ -10,7 +10,7 @@
 # Beispiel: schlange = Schlange(fell, gewicht, groesse, besitzer, kontinent)
 # print(schlange) # False, 2, 2.00, 'Julia', 'Australien'
 
-from datei import Person
+from python_2.person import Person
 
 class Tier: # Superklasse / Elternklasse
     def __init__(self, fell, gewicht, groesse): # fell boolean(True or False)

@@ -1,4 +1,4 @@
-from datei import Person
+from python_2.person import Person
 
 person0 = Person('Julia', 80, 1.76, 31, "Hannover")
 
