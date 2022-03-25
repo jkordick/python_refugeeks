@@ -1,38 +1,5 @@
 # Wir schreiben einen Passwort-Manager
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Schreibe eine Klasse Account mit den drei Attributen
 # program - das Programm, zu dem der Account gehört
 # username - der Benutzername, der zum Zugang zu dem Programm verwendet wird
@@ -40,9 +7,6 @@
 # und zwei Methoden/Funktionen:
 # getProgramName() - die das zugehörige Program des Accounts zurück gibt
 # changePassword(password) - um das gespeicherte Passwort zu ändern
-
-from re import U
-
 
 class Account:
     def __init__(self, program, username, password, istAdminAccount):
@@ -141,47 +105,6 @@ finally:
     print("Hat nicht geklappt")
 
 """
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Schreibe eine Klasse PasswordManager mit zwei Attributen:
 # adminAccount - vom Typ AdminAccount
 # accounts - eine Liste mit Accounts
