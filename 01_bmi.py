@@ -44,7 +44,11 @@ def bmiBerechnen1(groesse, gewicht):
     elif 25 <= bmi <= 29.9:
         return 'Übergewicht'
     else:
+<<<<<<< HEAD
         return'Du bist krank'
+=======
+        return 'Du bist krank'
+>>>>>>> 02_tanken
 
 
 def bmiBerechnen2(groesse, gewicht):
