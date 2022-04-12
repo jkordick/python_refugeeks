@@ -24,6 +24,14 @@ import requests
 # Schreibe einen Konstruktor und eine String-Methode.
 # Nutze zur Erstellung der Personen-Objekte eine Schleife.
 
+
+# 1. Schritt: Daten aus der response in einer Datei speichern.
+# 2. Schritt: Überpüfen, ob in der Datei schon Daten drin stehen, falls ja, keinen weiteres
+# Get machen können. <-> Datei ist leer => Daten aus dem Internet lesen (und dann speichern)
+# 3. Schritt: Weitere Datei erstellen und die Namen der Personen in der Datei speichern.
+# Dateien öffnen und Dateien schließen.
+
+
 class RequestException(Exception):
     def __str__(self):
         return "Beim Request ist ein Fehler aufgetreten."
@@ -42,7 +50,6 @@ def getAllNames():
 
 
 getAllNames()
-
 
 # HTTP Status Codes:
 # 2xx - alles okay 
