@@ -21,6 +21,10 @@ def binary_search(arr, target):
 
 binary_search([1,6,10,20,23,29,33,37,42,47,50,55,60,74,86,100], 33)
 
+# Wir nehmen eine unsortierte Liste.
+# Diese Liste sortieren wir mit dem bubble sort.
+# In dieser sortierten Liste suchen wir mit Hilfe der binary search eine Zahl.
+# Wir messen die Laufzeit unseres Programms.
 # Wir gehen bei der binary search davon aus, dass die Liste sortiert ist.
 # Stelle sicher, dass die Liste sortiert ist, indem du bubble sort und binary search so kombinierst.
 # Mach am Ende Laufzeitmessung der kombinierten Funktionen.
