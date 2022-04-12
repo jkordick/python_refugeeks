@@ -1,5 +1,5 @@
 import requests
-
+import json
 #API: application programming interface -> Anwendungsschnittstelle oder Programmierschnittstelle
 
 #print(response.text) # String
@@ -31,23 +31,34 @@ import requests
 # 3. Schritt: Weitere Datei erstellen und die Namen der Personen in der Datei speichern.
 # Dateien öffnen und Dateien schließen.
 
-
 class RequestException(Exception):
     def __str__(self):
         return "Beim Request ist ein Fehler aufgetreten."
 
 def getAllNames():
-    try:
-        response = requests.get("https://swapi.dev/api/people/")
-    except:
-        print(RequestException())
-    dict = response.json()
-    listOfDicts = dict['results']
-
+    file = open('text.txt','r')
+    if not file.read(): # Datei enthält keine Daten bzw ist leer # file.size()
+        try:
+            file.close()
+            response = requests.get("https://swapi.dev/api/people/")
+        except:
+            print(RequestException())
+        dict = response.json()
+        listOfDicts = dict['results']
+        file = open('text.txt','w')
+        file.write(str(listOfDicts))
+        file.close()
+    else: # Datei enthält Daten
+        file = open('text.txt', 'r')
+        data = file.read() # Daten als String - wir brauchen: Daten, als Liste von Dict
+        file.close()
+        #print(json.loads(data))
+    file.close()
+        
     for l in listOfDicts:
         print(l['name'])
 
-
+    # Schritt 3 wird morgen nachgeliefert :)
 
 getAllNames()
 
