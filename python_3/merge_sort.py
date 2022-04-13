@@ -17,3 +17,5 @@ def merge_sort(liste):
     #return merge(list, leftList, rightList)
 
 merge_sort([54,26,93,17,77,31,44,55,20])
+
+# Hausaufgabe: Den Mergesort zu Ende programmieren und verstehen :)
