@@ -20,4 +20,25 @@ noteAuswerten(3.0)
 #   Zähler + 1
 # print Namen
 
+def namenListeErstellen():
+    zaehler = 0
+    namen = []
+    while zaehler <= 10:
+        name = input("Bitte gib einen Namen ein")
+        namen.append(name)
+        zaehler += 1 # zaehler = zaehler + 1
+    print(namen)
+
+namenListeErstellen()
+
+
 # 3. Aufgabe
+# namenHinzufuegen(liste)
+#   setze einen Zähler auf 0
+#   so lange Zähler <= 10
+#       input Name
+#       Name zur Liste hinzufügen            
+#       Zähler + 1
+#       namenHinzufuegen(liste)
+
+# Aufruf von namenHinzufügen mit einer leeren Liste
