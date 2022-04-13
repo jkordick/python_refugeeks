@@ -1,18 +1,18 @@
-def merge_sort(list):
-    if len(list) < 2:  # Abbruchbedingung, um die Rekursion beenden zu können
-        return list
-    middle = len(list) // 2
+def merge_sort(liste):
+    if len(liste) < 2:  # Abbruchbedingung, um die Rekursion beenden zu können
+        return liste
+    mitte = len(liste) // 2
 
-    print("Aktuelle Liste: ", list)
+    print("Aktuelle Liste: ", liste)
 
-    leftList = list[:middle]
-    rightList = list[middle:]
+    linkeListe = liste[:mitte]
+    rechteListe = liste[mitte:]
 
-    print("Aktuelle linke Liste: ", leftList)
-    print("Aktuelle rechte Liste", rightList)
+    print("Aktuelle linke Liste: ", linkeListe)
+    print("Aktuelle rechte Liste", rechteListe)
 
-    merge_sort(leftList)
-    merge_sort(rightList)
+    merge_sort(linkeListe)
+    merge_sort(rechteListe)
 
     #return merge(list, leftList, rightList)
 
