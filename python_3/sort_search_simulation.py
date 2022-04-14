@@ -32,26 +32,26 @@ from quick_sort import quick_sort
 
 def algorithmusAuswahl():
     liste = [54,26,93,17,77,31,44,55,20]
-    eingabe = input("Welcher Algorithmus soll verwendet werden? ")
+    target = 17
+    while True:
+        eingabe = input("Welcher Algorithmus soll verwendet werden? ")
 
-    begin = time.time()
-    if eingabe == "Bubble":
-        bubble_sort(liste)
-    elif eingabe == "Merge":
-        merge_sort(liste)
-    elif eingabe == "Quick":
-        quick_sort(liste)
-    elif eingabe == "Linear":
-        target = int(input("Bitte gib die Zahl an, die gesucht werden soll: "))
-        linear_search(liste, target)
-    elif eingabe == "Binary":
-        target = int(input("Bitte gib die Zahl an, die gesucht werden soll: "))
-        binary_search(liste, target)
-    else:
-        print("Es wurde keine Eingabe gemacht")
-    end = time.time()
+        begin = time.time()
+        if eingabe == "Bubble":
+            bubble_sort(liste)
+        elif eingabe == "Merge":
+            merge_sort(liste)
+        elif eingabe == "Quick":
+            quick_sort(liste)
+        elif eingabe == "Linear":
+            linear_search(liste, target)
+        elif eingabe == "Binary":
+            binary_search(liste, target)
+        else:
+            print("Es wurde keine Eingabe gemacht")
+        end = time.time()
 
-    print("Der Algorithmus wurde durchgeführt mit folgender Liste: " + str(liste))
-    print("Das Programm lief : " + str(end-begin) + " Sekunden")
+        print("Der Algorithmus wurde durchgeführt mit folgender Liste: " + str(liste))
+        print("Das Programm lief : " + str(end-begin) + " Sekunden")
 
 algorithmusAuswahl()
