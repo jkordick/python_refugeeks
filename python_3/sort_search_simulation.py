@@ -42,10 +42,10 @@ def algorithmusAuswahl():
     elif eingabe == "Quick":
         quick_sort(liste)
     elif eingabe == "Linear":
-        target = input("Bitte gib die Zahl an, die gesucht werden soll: ")
+        target = int(input("Bitte gib die Zahl an, die gesucht werden soll: "))
         linear_search(liste, target)
     elif eingabe == "Binary":
-        target = input("Bitte gib die Zahl an, die gesucht werden soll: ")
+        target = int(input("Bitte gib die Zahl an, die gesucht werden soll: "))
         binary_search(liste, target)
     else:
         print("Es wurde keine Eingabe gemacht")
