@@ -1,26 +1,26 @@
-def merge(mainList, leftList, rightList):
-    indexLeft = indexRight = indexMain = 0
+def merge(liste, linkeListe, rechteListe):
+    indexLinkeListe = indexRechteListe = indexListe = 0
 
-    while indexLeft < len(leftList) and indexRight < len(rightList):
-        if leftList[indexLeft] <= rightList[indexRight]:
-            mainList[indexMain] = leftList[indexLeft]                
-            indexLeft += 1
+    while indexLinkeListe < len(linkeListe) and indexRechteListe < len(rechteListe):
+        if linkeListe[indexLinkeListe] <= rechteListe[indexRechteListe]:
+            liste[indexListe] = linkeListe[indexLinkeListe]                
+            indexLinkeListe += 1
         else:
-            mainList[indexMain] = rightList[indexRight]
-            indexRight += 1
-        indexMain += 1
+            liste[indexListe] = rechteListe[indexRechteListe]
+            indexRechteListe += 1
+        indexListe += 1
 
-    while indexLeft < len(leftList):
-            mainList[indexMain] = leftList[indexLeft]
-            indexLeft += 1
-            indexMain += 1
+    while indexLinkeListe < len(linkeListe):
+            liste[indexListe] = linkeListe[indexLinkeListe]
+            indexLinkeListe += 1
+            indexListe += 1
 
-    while indexRight < len(rightList):
-            mainList[indexMain] = rightList[indexRight]
-            indexRight += 1
-            indexMain += 1
+    while indexRechteListe < len(rechteListe):
+            liste[indexListe] = rechteListe[indexRechteListe]
+            indexRechteListe += 1
+            indexListe += 1
 
-    print("Aktuelle sortierte Liste:", mainList)
+    #print("Aktuelle sortierte Liste:", mainList)
 
 
 def merge_sort(liste):
@@ -40,8 +40,5 @@ def merge_sort(liste):
     merge_sort(rechteListe)
 
     return merge(liste, linkeListe, rechteListe)
-
-
-merge_sort([54,26,93,17,77,31,44,55,20])
 
 # Hausaufgabe: Den Mergesort zu Ende programmieren und verstehen :)

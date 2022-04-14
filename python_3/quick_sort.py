@@ -1,24 +1,24 @@
-def quick_sort(start, end, array):
+def quick_sort(start, end, liste):
     if (start < end):
-        p = partition(start, end, array)
+        p = partition(start, end, liste)
 
-        quick_sort(start, p - 1, array)
-        quick_sort(p + 1, end, array)
+        quick_sort(start, p - 1, liste)
+        quick_sort(p + 1, end, liste)
 
-def partition(start, end, array):
+def partition(start, end, liste):
     pivot_index = start
-    pivot = array[pivot_index]
+    pivot = liste[pivot_index]
 
     while start < end:
-        while start < len(array) and array[start] <= pivot:
+        while start < len(liste) and liste[start] <= pivot:
             start += 1
 
-        while array[end] > pivot:
+        while liste[end] > pivot:
             end -= 1
 
         if (start < end):
-            array[start], array[end] = array[end], array[start]
+            liste[start], liste[end] = liste[end], liste[start]
 
-        array[end], array[pivot_index] = array[pivot_index], array[end]
+        liste[end], liste[pivot_index] = liste[pivot_index], liste[end]
 
     return end
