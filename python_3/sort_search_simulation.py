@@ -1,5 +1,5 @@
 # Schreibe ein Programm, das alle Sortier und Suchalgorithmen, die wir
-# kennen gelernt haben, enthält.
+# kennen gelernt haben, enthält. (Lineare Suche, Binäre Suche, BubbleSort, MergeSort, QuickSort)
 # Diese müssen alle, in einzelnen Funktionen sein, damit wir diese aufrufen können.
 # Steuert über einen input, welchen Such und/oder Sortieralgorithmus, ihr verwenden möchtest.
 # Für jeden Simulationsdurchlauf eine Zeitmessung machen.
