@@ -23,3 +23,16 @@ import numpy as np
 # Welche Nummer wird mit dem folgenden Aufruf arr[0, 0, 1] ausgegeben?
 # Addiere die Werte an den Indexen [0, 1, 0] und [1, 1, 0] - welches Ergebnis kommt dabei heraus?
 
+arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+print(arr[1, 0, 0])
+print(arr[1, 0, 2])
+print(arr[1, 1, 1])
+print(arr[0, 0, 1])
+print(arr[0, 1, 0] + arr[1, 1, 0]) # 4 + 10
+
+# Gegeben ist folgendes n-dimensionales Array: [1, 2, 3, 4]
+# Lass dir die Nummer 2 ausgeben.
+# Lass dir die Nummer 1 ausgeben.
+# Addiere die Werte an den Indexen [1] und [2] - welches Ergebnis kommt dabei heraus?
+
+
