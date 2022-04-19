@@ -121,6 +121,22 @@ newarr = arr.astype(bool)
 print(newarr)
 print(newarr.dtype)
 
+# [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]]
+# Schreibe ein Programm, dass dir jedes Element einzeln ausgibt.
+# Das Ergebnis soll sein:
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+# 10
+
+
+
 
 
 
