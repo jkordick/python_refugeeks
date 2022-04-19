@@ -46,6 +46,19 @@ import numpy as np
 # Gegeben ist folgendes n-dimensionales Array: [1, 2, 3, 4, 5, 6, 7]
 # Wie muss ich Slicing anwenden, um das Ergebnis [2, 3, 4] zu erhalten?
 # Wie muss ich Slicing anwenden, um das Ergebnis [6, 7] zu erhalten?
-# Beispiel negatives Slicing: [-5:-1] - was ist das Ergebnis?
+# Beispiel für negatives Slicing: [-5:-1] - was ist das Ergebnis?
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+print(arr[1:4])
+print(arr[5:])
+print(arr[-5:-1]) # wenn ich die letzten 4 Elemente meines Arrays finden möchte (exclusive des letzten Elements)
+
+# Wie nutzen wir Slicing bei 2-dimensionalen Arrays?
+# Gegeben ist folgendes n-dimensionales Array: [[6, 7, 8, 9, 10], [1, 2, 3, 4, 5]]
+# Lass dir [3, 4] ausgeben.
+# Lass dir [7, 8] und [1, 2, 3] ausgeben.
+# Lass dir aus beiden Arrays den Index [3] ausgeben.
+# Lass dir aus beiden Arrays die Indexe [1]-[3] ausgeben.
+# Lass dir aus dem ersten Array die Indexe [0]-[3] ausgeben.
 
 
