@@ -1,6 +1,7 @@
 # Mac: >>> pip3 install numpy
 # Windows: >>> python3 -m pip install numpy
 
+from statistics import mean
 from turtle import goto
 import numpy as np
 
@@ -114,7 +115,7 @@ print("Alter Typ:", arr.dtype)
 newarr = arr.astype('i8')
 print(newarr)
 print("Neuer Typ:", newarr.dtype)
-"""
+
 
 arr = np.array([1, 0, 3, -1, 1.1]) # 0 = False # != 0 = True
 newarr = arr.astype(bool)
@@ -134,6 +135,68 @@ print(newarr.dtype)
 # 8
 # 9
 # 10
+
+arr = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]]
+
+for i in arr:
+    for j in i:
+        print(j)
+
+
+arr2 = np.array([[5, 4, 3, 2, 1], [6, 7, 8, 9, 10]])
+
+print(arr2.mean())
+print(arr2.max())
+print(arr2.min())
+print(arr2.sort())
+print(arr2)
+
+arr1 = np.array([7, 2, 5, 4, 3, 6, 1])
+print(arr1.mean())
+print(arr1.max())
+print(arr1.min())
+print(arr1.sort())
+print(arr1)
+
+arrS = np.array(["hallo", "hello", "welt", "num", "py", 5, 10, 1, 2])
+# print(arrS.mean()) # !
+# print(arrS.max())
+# print(arrS.min())
+print(arrS.sort())
+print(arrS)
+
+
+arr1S = np.array(['7', '2', '5', '4', '3', '6', '1']) # funktioniert auch :)
+
+print(arr1S, arr1, arr2) # print() 1. Parameter Pflicht, 2. + n Parameter Optional
+#[Startindex:Endindex]
+#[Startindex:(Step/Schrittweite:)Endindex]
+
+"""
+arr0 = np.array([[3, 4], [1, 2], [9, 10]])
+arr1 = np.array([[5, 6], [7, 8], [11, 12]])
+
+#print(np.concatenate((arr0, arr1), axis=None))
+#print(np.concatenate((arr0, arr1), axis=0))
+#print(np.concatenate((arr0, arr1), axis=1))
+
+print(arr0.shape) # Tupel der Array-Dimensionen.
+print(arr0.ndim) # Anzahl der Array-Dimensionen
+print(arr0.size) # Anzahl Elemente im Array
+print(arr0.itemsize) # Speichergröße eines einzelnen Elements in bytes
+print(arr0.nbytes)
+
+# Schreibe eine Funktion, die zwei Übergabeparameter akzeptiert (arr0, arr1).
+# Prüfe, ob die beiden Arrays die gleiche Größe haben. Erinnerung: mit arr.size können wir die Größe prüfen
+# Wenn die Arrays gleich groß sind print("Gleich groß"), wenn nicht print("Nicht gleich groß")
+
+
+
+
+
+
+
+
 
 
 
