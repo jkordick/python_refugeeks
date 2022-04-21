@@ -66,7 +66,20 @@ df = pd.DataFrame(
     }
 )
 
-print(df)
+# print(df)
+
+# Aufgabe: Eine der beiden csv-Dateien aus dem Github 
+# in unser Python Programm einlesen und sich die Daten ausgeben lassen.
+
+# data_frame_countries = pd.read_csv('countries.csv')
+# print(data_frame_countries)
+
+data_frame_titanic = pd.read_csv('titanic.csv')
+print(data_frame_titanic["Survived"].describe()) # 0 tot # 1 am Leben
+
+
+
+
 
 
 
